@@ -43,8 +43,16 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(jpe?g|png|gif|svg)/,
-        type: 'asset/resource,',
+        test: /\.(?:ico|jpe?g|png|gif)$/,
+        type: 'asset/resource',
+        generator: {
+          publicPath: 'assets/images/',
+          outputPath: 'assets/images/',
+        },
+      },
+      {
+        test: /\.svg$/,
+        type: 'asset/inline',
         generator: {
           publicPath: 'assets/images/',
           outputPath: 'assets/images/',
