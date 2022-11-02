@@ -10,7 +10,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].[contentHash].js',
     clean: true,
-    assetModuleName: '[name][ext]',
+    assetModuleFilename: '[name][ext]',
   },
   devServer: {
     static: path.resolve(__dirname, 'dist'),
@@ -46,8 +46,8 @@ module.exports = {
         test: /\.(jpe?g|png|gif|svg)/,
         type: 'asset/resource,',
         generator: {
-          publicPath: '/src/assets/images',
-          output: 'assets/images',
+          publicPath: 'assets/images/',
+          outputPath: 'assets/images/',
         },
       },
     ],
