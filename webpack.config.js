@@ -58,6 +58,14 @@ module.exports = {
           outputPath: 'assets/images/',
         },
       },
+      {
+        test: /\.(wott(2)?|eot|ttf|otf)$/,
+        type: 'asset/inline',
+        generator: {
+          publicPath: 'assets/fonts/',
+          outputPath: 'assets/fonts/',
+        },
+      },
     ],
   },
   resolve: { extensions: ['.tsx', '.ts', '.js'] },
