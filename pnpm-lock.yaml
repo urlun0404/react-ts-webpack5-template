@@ -40,7 +40,10 @@ devDependencies:
   webpack: 5.74.0_webpack-cli@4.10.0
   webpack-cli: 4.10.0_vnmgq7jx5zjkzolvtfp7mdf5ri
   webpack-dev-server: 4.11.1_5v66e2inugklgvlh4huuavolfq
+<<<<<<< HEAD
   webpack-merge: 5.8.0
+=======
+>>>>>>> e2c66fd... Separate babel config out from webpack config
 
 packages:
 

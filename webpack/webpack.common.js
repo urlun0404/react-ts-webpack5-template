@@ -29,13 +29,6 @@ module.exports = {
         exclude: '/node-modules/',
         use: {
           loader: 'babel-loader',
-          options: {
-            presets: [
-              '@babel/preset-env',
-              ['@babel/preset-react', { runtime: 'automatic' }],
-              '@babel/preset-typescript',
-            ],
-          },
         },
       },
       {
