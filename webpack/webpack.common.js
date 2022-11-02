@@ -4,10 +4,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: {
     // bundle: path.resolve(__dirname, 'src/index.html'),
-    bundle: path.resolve(__dirname, 'src/index.tsx'),
+    bundle: path.resolve(__dirname, '../src/index.tsx'),
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, '../dist'),
     filename: '[name].[contentHash].js',
     clean: true,
     assetModuleFilename: '[name][ext]',
@@ -68,5 +68,13 @@ module.exports = {
       },
     ],
   },
-  resolve: { extensions: ['.tsx', '.ts', '.js'] },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+    alias: {
+      '@': path.resolve(__dirname, '../'),
+      '@types': path.resolve(__dirname, '../types'),
+      '@components': path.resolve(__dirname, '../src/components'),
+      '@images': path.resolve(__dirname, '../src/assets/images'),
+    },
+  },
 };
